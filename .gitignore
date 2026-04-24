@@ -1,0 +1,26 @@
+# Jekyll 构建产物 / 缓存
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler / vendor
+vendor/
+.bundle/
+
+# macOS / 编辑器
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# harness 工作流 / agent 工具链配置（纯博客仓库，不随站点上 GitHub）
+.workflow/
+artifacts/
+.claude/
+.codex/
+.kimi/
+.qoder/
+CLAUDE.md
+AGENTS.md
+WORKFLOW.md

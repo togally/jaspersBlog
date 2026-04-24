@@ -1,0 +1,32 @@
+title: "Jasper's Blog"
+author: "Jasper"
+description: "一个慢节奏的个人博客"
+email: ""
+
+url: "https://togally.github.io"
+baseurl: "/jaspersBlog"
+
+theme: minima
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# minima 主题默认把 about.md 挂到页首导航；此项保持默认即可
+header_pages:
+  - about.md
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CLAUDE.md
+  - AGENTS.md
+  - WORKFLOW.md
+  - .workflow/
+  - artifacts/
+  - vendor/
+  - .github/
