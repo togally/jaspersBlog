@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="site-header__brand">
+      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title | default: "Jasper's Blog" }}</a>
+      {%- if site.description -%}
+        <p class="site-tagline">{{ site.description }}</p>
+      {%- endif -%}
+    </div>
+    <nav class="site-header__nav">
+      {%- assign current = page.url -%}
+      <a href="{{ '/' | relative_url }}"{% if current == '/' %} class="active"{% endif %}>首页</a>
+      <a href="{{ '/about/' | relative_url }}"{% if current contains '/about' %} class="active"{% endif %}>关于</a>
+    </nav>
+  </div>
+</header>

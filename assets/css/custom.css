@@ -62,3 +62,77 @@ hr {
   border-top: 1px solid var(--border-subtle);
   margin: 2em 0;
 }
+
+/* ============================================================
+   3. Site header (极简横排: 左 brand / 右 nav)
+   ============================================================ */
+
+.site-header {
+  background-color: var(--bg-primary);
+  border-top: none;
+  border-bottom: 1px solid var(--border-subtle);
+  min-height: auto;
+  padding: 24px 0 20px;
+}
+
+.site-header__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.2px;
+  border-bottom: none;
+}
+
+.site-title:hover {
+  border-bottom: none;
+  opacity: 0.8;
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.site-header__nav a {
+  color: var(--text-primary);
+  border-bottom: none;
+  padding: 2px 0;
+}
+
+.site-header__nav a:hover,
+.site-header__nav a.active {
+  color: var(--accent);
+}
+
+@media (max-width: 540px) {
+  .site-header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
