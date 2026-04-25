@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<main class="home">
+  <h1 class="home__heading">博文 · 共 {{ site.posts.size }} 篇</h1>
+
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-cards">
+      {%- for post in site.posts -%}
+        <li class="post-card">
+          <a class="post-card__link" href="{{ post.url | relative_url }}">
+            <div class="post-card__top">
+              <h2 class="post-card__title">{{ post.title | escape }}</h2>
+              <time class="post-card__date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </time>
+            </div>
+            {%- if post.excerpt -%}
+              <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    <p class="post-card__excerpt">暂无博文。</p>
+  {%- endif -%}
+
+  {{ content }}
+</main>

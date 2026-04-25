@@ -188,3 +188,81 @@ hr {
     text-align: center;
   }
 }
+
+/* ============================================================
+   5. Home: card-style post list with excerpts
+   ============================================================ */
+
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.home__heading {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+.post-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-card {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.post-card:last-child {
+  border-bottom: none;
+}
+
+.post-card__link {
+  display: block;
+  padding: 22px 4px;
+  border-bottom: none;
+  color: inherit;
+  transition: background-color 0.15s ease;
+}
+
+.post-card__link:hover {
+  background-color: var(--bg-subtle);
+  border-bottom: none;
+}
+
+.post-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.post-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.post-card__date {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.post-card__excerpt {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
