@@ -136,3 +136,55 @@ hr {
     gap: 10px;
   }
 }
+
+/* ============================================================
+   4. Site footer (极简: 版权 + Email + RSS)
+   ============================================================ */
+
+.site-footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+  border-left: none;
+  border-right: none;
+  padding: 24px 0 28px;
+  margin-top: 48px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.site-footer__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.site-footer__copy {
+  color: var(--text-secondary);
+}
+
+.site-footer__links a {
+  color: var(--text-secondary);
+  border-bottom: none;
+  margin: 0 2px;
+}
+
+.site-footer__links a:hover {
+  color: var(--accent);
+}
+
+.site-footer__links .dot {
+  color: var(--border-subtle);
+  margin: 0 8px;
+}
+
+@media (max-width: 540px) {
+  .site-footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

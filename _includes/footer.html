@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span class="site-footer__copy">© {{ 'now' | date: '%Y' }} {{ site.author | default: "Jasper" }}</span>
+    <div class="site-footer__links">
+      {%- if site.email -%}
+        <a href="mailto:{{ site.email }}">Email</a>
+        <span class="dot">·</span>
+      {%- endif -%}
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </div>
+  </div>
+</footer>
