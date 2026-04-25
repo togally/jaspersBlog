@@ -2,3 +2,63 @@
 ---
 /* Jasper's Blog — custom theme overrides on top of minima.
    See .workflow/state/brainstorm/2026-04-24-blog-visual-and-tooling-design.md */
+
+/* ============================================================
+   1. Design Tokens (light = default + dark via media query)
+   ============================================================ */
+
+:root {
+  --bg-primary: #FDFBF7;
+  --bg-subtle: #F5EFE6;
+  --text-primary: #2C2C2C;
+  --text-secondary: #9A8F7D;
+  --accent: #2F5E3A;
+  --border-subtle: #E5DDD0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0F0F10;
+    --bg-subtle: #1A1A1C;
+    --text-primary: #E8E6E3;
+    --text-secondary: #8B8680;
+    --accent: #F59E0B;
+    --border-subtle: #2A2A2C;
+  }
+}
+
+/* ============================================================
+   2. Base typography — minima 默认偏拉丁字体，这里叠加中文衬线 + 行高
+   ============================================================ */
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "PingFang SC", "Noto Serif SC", "Source Han Serif SC",
+               Georgia, "Source Serif Pro", serif;
+  font-size: 16px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, kbd, samp, tt {
+  font-family: "SF Mono", Menlo, Consolas, "Courier New", monospace;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 2em 0;
+}
