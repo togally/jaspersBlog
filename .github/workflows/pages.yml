@@ -37,6 +37,9 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Generate Pagefind index
+        run: npx -y pagefind@latest --site _site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
