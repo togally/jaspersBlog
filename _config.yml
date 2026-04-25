@@ -1,7 +1,8 @@
 title: "Jasper's Blog"
 author: "Jasper"
 description: "一个慢节奏的个人博客"
-email: ""
+email: a550844389@gmail.com
+excerpt_separator: "<!--more-->"
 
 url: "https://togally.github.io"
 baseurl: "/jaspersBlog"
